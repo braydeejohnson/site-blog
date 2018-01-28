@@ -1,0 +1,22 @@
+version: '2'
+services:
+  web:
+    image: braydeejohnson/nginx-phpfpm:latest
+    links:
+      - app:fpm
+    volumes_from:
+      - data
+    environment:
+      - VIRTUAL_HOST=blog.localhost
+  app:
+    image: braydeejohnson/phpfpm:7.0
+    volumes_from:
+      - data
+  data:
+    image: braydeejohnson/data:latest
+    volumes:
+      - D:\ROOT\Development\blog:/data/www
+networks:
+  default:
+    external:
+      name: local

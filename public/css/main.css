@@ -1,0 +1,14 @@
+@tailwind preflight;
+@tailwind utilities;
+
+.card-portrait {
+	top: 3rem;
+	left: 1rem;
+}
+
+.card {
+	background: white;
+	padding: 1.5rem;
+	text-align: center;
+	border: solid 1px #d3d3d3;
+}
