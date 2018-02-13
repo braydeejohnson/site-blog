@@ -8,6 +8,9 @@ services:
       - data
     environment:
       - VIRTUAL_HOST=blog.localhost
+    expose:
+     - "80"
+     - "443"
   app:
     image: braydeejohnson/phpfpm:7.0
     volumes_from:
