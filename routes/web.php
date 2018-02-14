@@ -11,15 +11,6 @@
 |
 */
 
-use Illuminate\Mail\Markdown;
-use Illuminate\Support\Facades\File;
-
-Route::get('/', function () {
-    return view('posts');
-});
-
-Route::get('{slug}', function(){
-	return view('post', [
-		'body' =>   Markdown::parse(File::get(storage_path('/app/posts/test.md')))
-	]);
-});
+Route::get('/', 'PostController@index');
+Route::get('{slug}', 'PostController@showOne');
+Route::get('tags/{tag}', 'PostController@showTags');

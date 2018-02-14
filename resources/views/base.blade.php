@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/main.css">
+    <title>Braydee's Blog - @yield('title')</title>
 </head>
 <body class="bg-grey-lighter">
 <nav class="bg-grey-darkest p-6 flex justify-center shadow">
