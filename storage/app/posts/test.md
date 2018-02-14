@@ -1,0 +1,65 @@
+# This is my blog post
+---
+
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus tincidunt mauris sit amet tristique. Nulla auctor rutrum tincidunt. Vestibulum ante ipsum primis in faucibus.
+
+I could just start typing about the topic that i care about and keep syaying stuff that I want to say, and not care about my really bad typing skills when I hit a typo. 
+
+```php
+	/**
+	 * Parse the given Markdown text into HTML.
+	 *
+	 * @param  string  $text
+	 * @return \Illuminate\Support\HtmlString
+	 */
+	public static function parse($text)
+	{
+	    $parsedown = new Parsedown;
+	
+	    return new HtmlString($parsedown->text($text));
+	}
+```
+
+And here is a test of some yml file configuration, maybe for use with docker or something...
+
+`docker-compose.yml`
+```yml
+version: '2'
+services:
+  web:
+    image: braydeejohnson/nginx-phpfpm:latest
+    links:
+      - app:fpm
+    volumes_from:
+      - data
+    environment:
+      - VIRTUAL_HOST=blog.localhost
+    expose:
+     - "80"
+     - "443"
+  app:
+    image: braydeejohnson/phpfpm:7.0
+    volumes_from:
+      - data
+  data:
+    image: braydeejohnson/data:latest
+    volumes:
+      - ./:/data/www
+networks:
+  default:
+    external:
+      name: local
+```
+
+Praesent ut lacus quis enim placerat pellentesque. Nam ut massa ligula. Aliquam dapibus nisl non eleifend porttitor. Nam sagittis porta elit id consectetur. Nunc in vestibulum mi, eu tempor massa. Integer id fermentum ligula, eget pharetra mi. Etiam rutrum sagittis elit, vitae cursus orci rhoncus ac. Curabitur dictum vitae nulla non gravida. Suspendisse ultricies vestibulum pellentesque. Donec pharetra tincidunt faucibus. Suspendisse cursus felis non dolor porttitor congue. Etiam imperdiet ullamcorper nunc ac lobortis. Nunc consequat nisl et libero sagittis venenatis. Curabitur aliquam ligula at enim condimentum eleifend. Morbi scelerisque tellus malesuada mauris euismod egestas. Nulla interdum nisi pellentesque, tempus metus nec, accumsan elit.
+
+Vestibulum elementum sem in mauris bibendum consectetur. Donec tempus quis diam at convallis. Suspendisse aliquam fringilla tellus, convallis finibus sapien tempus sed. Morbi convallis facilisis nisl, sit amet tincidunt orci. Donec sed scelerisque orci, sollicitudin facilisis nulla. Proin a tellus et eros commodo pulvinar. In enim sem, vestibulum ut malesuada a, pharetra ut enim. Sed consequat in lorem eu rutrum. Fusce consectetur magna vel dignissim auctor. Integer dictum orci magna, pulvinar ultricies tortor placerat ac. Suspendisse blandit odio id dictum ultrices. Morbi nec tempus neque, a scelerisque quam. Proin porttitor purus sit amet diam interdum, eget vehicula sem tincidunt. Duis vel lorem pulvinar, elementum augue ac, luctus urna.
+
+Donec elit ligula, efficitur vitae placerat at, hendrerit sed libero. Fusce eget lobortis odio. Aenean sed nisl placerat, lobortis libero vel, accumsan sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam dignissim nibh vel massa efficitur malesuada. Maecenas vel turpis diam. Sed at libero erat. Mauris erat est, dapibus at enim sed, fermentum luctus quam. Vivamus lectus nunc, pellentesque eget nibh a, scelerisque molestie mauris. Maecenas justo sapien, convallis vitae sem at, tincidunt pellentesque eros. Mauris non quam tincidunt lacus sodales sodales. Nullam tristique justo tortor, sodales faucibus quam lacinia nec. Nunc varius urna id arcu bibendum tempor. Etiam vitae lorem sed arcu viverra vehicula a at augue. Vestibulum quis odio gravida, auctor justo eget, eleifend purus. Donec sed porta augue, non congue arcu.
+  
+  
+## Segment1
+---
+Praesent ut lacus quis enim placerat pellentesque. Nam ut massa ligula. Aliquam dapibus nisl non eleifend porttitor. Nam sagittis porta elit id consectetur. Nunc in vestibulum mi, eu tempor massa. Integer id fermentum ligula, eget pharetra mi. Etiam rutrum sagittis elit, vitae cursus orci rhoncus ac. Curabitur dictum vitae nulla non gravida. Suspendisse ultricies vestibulum pellentesque. Donec pharetra tincidunt faucibus. Suspendisse cursus felis non dolor porttitor congue. Etiam imperdiet ullamcorper nunc ac lobortis. Nunc consequat nisl et libero sagittis venenatis. Curabitur aliquam ligula at enim condimentum eleifend. Morbi scelerisque tellus malesuada mauris euismod egestas. Nulla interdum nisi pellentesque, tempus metus nec, accumsan elit.
+
+[link](http://example.com)
