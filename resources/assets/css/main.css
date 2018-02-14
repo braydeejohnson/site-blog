@@ -12,3 +12,94 @@
 	text-align: center;
 	border: solid 1px #d3d3d3;
 }
+
+.post {
+	@apply .px-6 .py-4 .text-left .text-grey-darker .text-base;
+}
+
+.post p {
+	@apply .pt-4 .pb-2 .mb-1;
+}
+
+.post p img {
+	@apply .w-full .mb-2;
+}
+
+.post h1 {
+	@apply .text-2xl .mb-1 .mt-4;
+}
+
+.post h2 {
+	@apply .text-xl .mb-1 .mt-4;
+}
+
+.post h3 {
+	@apply .text-lg .mb-1 .mt-4;
+}
+
+.post h4 {
+	@apply .text-base .mb-1;
+}
+
+.post h5 {
+	@apply .text-sm .mb-1;
+}
+
+.post h6 {
+	@apply .text-xs .mb-1;
+}
+
+.post em {
+	@apply .italic;
+}
+
+.post strong {
+	@apply .font-bold;
+}
+
+.post a {
+	@apply .no-underline .text-grey-darker .font-semibold;
+}
+
+.post a:hover {
+	@apply .text-red-dark;
+}
+
+.post blockquote {
+	@apply .ml-2 .px-4 .py-4 .border-l-2 .border-grey-darker .bg-yellow-lighter .mb-2 .shadow;
+}
+
+.post blockquote:before {
+	content: open-quote;
+}
+
+.post blockquote:after {
+	content: close-quote;
+}
+
+.post blockquote p {
+	display: inline;
+}
+
+.post hr {
+	@apply .mb-4 .border-b .w-full .block;
+}
+
+.post code {
+	@apply .inline-block .px-4 .py-4 .text-grey-lightest .mb-2;
+}
+
+.post p > code {
+	@apply .px-2 .py-1 .mb-1 .rounded .bg-grey-darkest;
+}
+.post pre {
+	overflow-x: auto;
+}
+.post pre > code {
+	@apply .px-6 .py-4 .mb-2 .rounded;
+	background-color: none;
+}
+
+.post strong > a {
+	@apply .border-b .border-red-dark;
+}

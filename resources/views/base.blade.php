@@ -15,5 +15,6 @@
 <div class="flex justify-center">
     @yield('container')
 </div>
+<script src="/js/app.js"></script>
 </body>
 </html>

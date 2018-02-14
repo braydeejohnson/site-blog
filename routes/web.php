@@ -11,10 +11,15 @@
 |
 */
 
+use Illuminate\Mail\Markdown;
+use Illuminate\Support\Facades\File;
+
 Route::get('/', function () {
     return view('posts');
 });
 
 Route::get('{slug}', function(){
-	return view('post');
+	return view('post', [
+		'body' =>   Markdown::parse(File::get(storage_path('/app/posts/test.md')))
+	]);
 });

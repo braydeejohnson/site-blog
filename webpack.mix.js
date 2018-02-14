@@ -11,8 +11,12 @@ let tailwindcss = require('tailwindcss');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js');
-
-mix.postCss('resources/assets/css/main.css', 'public/css',[
-    tailwindcss('./tailwind.js'),
-]);
+mix
+    .js(['resources/assets/js/app.js', 'resources/assets/js/prism.js'], 'public/js')
+    .postCss('resources/assets/css/main.css', 'public/css',[
+        tailwindcss('./tailwind.js'),
+    ])
+    .styles([
+        'public/css/main.css',
+        'resources/assets/css/prism.css'
+    ], 'public/css/main.css');
