@@ -2,3 +2,4 @@
 !public/
 !posts/
 !.gitignore
+!tags.json
