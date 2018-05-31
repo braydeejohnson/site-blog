@@ -17,7 +17,7 @@
                         <div class="my-2 border-b border-grey-light"></div>
                     </div>
                     {{--<img class="w-full" src="https://picsum.photos/1024/500?random" alt="Sunset in the mountains">--}}
-                    <div class="px-6 py-4 relative post">
+                    <div class="px-6 pb-2 relative post">
                         {!! $post['body'] !!}
                         <span class="absolute pin-b pin-r mr-6"><a class="text-xs text-grey-dark hover:text-red-dark no-underline" href="{{ url($post["slug"]) }}">Read More</a></span>
                     </div>

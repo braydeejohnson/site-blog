@@ -26,19 +26,19 @@
 }
 
 .post h1 {
-	@apply .text-2xl .mb-1 .mt-4;
+	@apply .text-2xl .mb-1 .mt-2;
 }
 
 .post h2 {
-	@apply .text-xl .mb-1 .mt-4;
+	@apply .text-xl .mb-1 .mt-8;
 }
 
 .post h3 {
-	@apply .text-lg .mb-1 .mt-4;
+	@apply .text-lg .mb-1 .mt-6;
 }
 
 .post h4 {
-	@apply .text-base .mb-1;
+	@apply .text-base .mb-4;
 }
 
 .post h5 {
@@ -66,19 +66,19 @@
 }
 
 .post blockquote {
-	@apply .ml-2 .px-4 .py-4 .border-l-2 .border-grey-darker .bg-yellow-lighter .mb-2 .shadow;
+	@apply .px-4 .border-l-2 .border-red-dark .bg-yellow-lightest .mb-2 .text-grey-darker;
 }
 
-.post blockquote:before {
-	content: open-quote;
-}
+/*.post blockquote:before {*/
+	/*content: open-quote;*/
+/*}*/
 
-.post blockquote:after {
-	content: close-quote;
-}
+/*.post blockquote:after {*/
+	/*content: close-quote;*/
+/*}*/
 
 .post blockquote p {
-	display: inline;
+	display: inline-block;
 }
 
 .post hr {
@@ -93,6 +93,7 @@
 	@apply .px-2 .py-1 .mb-1 .rounded .bg-grey-darkest;
 }
 .post pre {
+	@apply .mb-4;
 	overflow-x: auto;
 }
 .post pre > code {
@@ -102,4 +103,8 @@
 
 .post strong > a {
 	@apply .border-b .border-red-dark;
+}
+
+.post p img {
+	@apply .border .border-grey-dark .border-solid .shadow;
 }

@@ -86,8 +86,12 @@ class PostController extends Controller
 	private function getTagList($forPost = null){
 		$tagManifest = json_decode(Storage::disk('local')->get("tags.json"), true);
 
-		if($forPost && isset($tagManifest[$forPost])){
-			return $tagManifest[$forPost];
+		if($forPost){
+			if(isset($tagManifest[$forPost])){
+				return $tagManifest[$forPost];
+			}
+
+			return [];
 		}
 
 		$tagList = [];
